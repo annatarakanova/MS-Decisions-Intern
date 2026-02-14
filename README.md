@@ -17,12 +17,19 @@ The main goal was to identify a robust and reproducible set of parameters that b
 
 ## Process & Methods
 - PBPK modeling
+
 Mechanistic approach to describe the pharmacokinetics of a substance based on substance-specific properties and mammalian physiology, for which a substantial amount of prior biological information is used for model building. Olaparib is a type of targeted therapy drug called a PARP inhibitor, which pharmacokinetics we were interested in.
+
 - PK-Sim
+
 A software tool for whole-body physiologically based pharmacokinetic modeling. This software was used to construct our own project for drug Olaparib and to run the PBPK simulation.
+
 - ospsuite R package
+
 A package provides the functionality of loading, manipulating and simulating the simulations created in PK-Sim. It was used to run the simulation by .pkml Olaparib file.
+
 - Approximate Bayesian Computation Sequential Monte Carlo (ABC-SMC) algorithm
+
 This iterative algorithm works by proposing parameter sets from a prior distribution, running a PBPK simulation for each set, and accepting only those sets where the simulated output is sufficiently close to the observed clinical data. To serve as gold-standard benchmark, a final reference posterior distribution was generated using a computationally intensive **Rejection from Priors sampling method**.
 
 
